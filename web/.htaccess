@@ -1,0 +1,3 @@
+<Files ~ "\.php$">
+  AcceptPathInfo on
+</Files>
