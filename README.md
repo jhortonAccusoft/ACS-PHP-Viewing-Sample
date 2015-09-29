@@ -1,6 +1,6 @@
 # ACS PHP Viewing Sample
 
-This is a PHP sample for using Accusoft's Cloud Services to view a document. With trivial changes, the same sample can be used to view documents using Accusoft's Prizm Content Connect on-premises product.
+This is a PHP document viewer sample for using Accusoft's Cloud Services to view a document. This sample code provides the ability to view, annotate, redact, search, and sign dozens of document types directly in the browser, including Microsoft Word, Microsoft PowerPoint, Microsoft Excel, PDF, CAD, DICOM medical images, JPG, PNG, TIFF, GIF, annd more. With trivial changes, the same sample can be used to view documents using Accusoft's Prizm Content Connect on-premises product.
 
 ## Running the sample
 
@@ -34,7 +34,7 @@ apache2ctl restart
 
 ### Configure the sample
 
-The last step is to add your API key to the config file (web/pcc.config). To get a key, go to the [Accusoft Cloud Portal](https://cloudportal.accusoft.com), log in, then click the "My Keys" tab.
+The last step is to add your API key to the config file (web/pcc.config). To get a key, go to the [Accusoft Cloud Portal](https://www.accusoft.com/products/accusoft-cloud-services/portal/), log in, then click the "My Keys" tab.
 
 In web/pcc.config, replace "PlaceYourAPIKeyHere" with your API key.
 
