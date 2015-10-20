@@ -40,14 +40,19 @@
                         <label class="primary"><%= pageRedactionOverlay.reason %></label>
                     </div>
                     <div class="pcc-col-8">
-                        <div class="pcc-select pcc-select-redaction-reason" data-pcc-redaction-reason data-pcc-toggle="dropdown-stamp-label" title="<%= selectLabel %>">
-                            <div class="pcc-label"><%= pageRedactionOverlay.selectReason %></div>
-                            <div class="pcc-arrow-down"></div>
-                            <div data-pcc-toggle-id="dropdown-stamp-label" class="pcc-dropdown">
-                                <% _.each(reasons.reasons, function(reason, index) { %>
-                                <div class="<%= (index % 2 === 0) ? 'even' : 'odd' %>"><%= reason.reason %></div>
-                                <% }); %>
+                        <div class="pcc-row">
+                            <div class="pcc-select pcc-select-redaction-reason" data-pcc-redaction-reason data-pcc-toggle="dropdown-stamp-label" title="<%= selectLabel %>">
+                                <div class="pcc-label"><%= pageRedactionOverlay.selectReason %></div>
+                                <div class="pcc-arrow-down"></div>
+                                <div data-pcc-toggle-id="dropdown-stamp-label" class="pcc-dropdown">
+                                    <% _.each(reasons.reasons, function(reason, index) { %>
+                                    <div class="<%= (index % 2 === 0) ? 'even' : 'odd' %>"><%= reason.reason %></div>
+                                    <% }); %>
+                                </div>
                             </div>
+                        </div>
+                        <div class="pcc-row">
+                            <input type="text" data-pcc-redaction-reason-input>
                         </div>
                     </div>
                     <% } %>
@@ -55,8 +60,8 @@
             </div>
         </div>
         <div class="pcc-row">
-            <button data-pcc-page-redaction="submit" class="pcc-center pcc-pull-right"><%= pageRedactionOverlay.submit %></button>
-            <button data-pcc-page-redaction="cancel" class="pcc-center"><%= pageRedactionOverlay.cancel %></button>
+            <button data-pcc-page-redaction="submit" class="pcc-pull-right"><%= pageRedactionOverlay.submit %></button>
+            <button data-pcc-page-redaction="cancel" class="pcc-pull-left"><%= pageRedactionOverlay.cancel %></button>
         </div>
 
     <% } else if (typeof(show) !== 'undefined' && show === 'status') { %>

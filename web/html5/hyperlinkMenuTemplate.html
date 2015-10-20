@@ -10,7 +10,13 @@
             <input type="text">
         </div>
     <%} else if (mode === "view" && link) { %>
-        <button data-pcc-hyperlink="edit" class="pcc-hyperlink-icon pcc-hyperlink-icon-edit" title="<%= language.editButton %>"></button>
-        <a href="<%= link %>" data-pcc-link-navigate target="_blank"><%= link %></a>
+        <% if (hrefType === "page") { %>
+            <a href="<%= link %>" data-pcc-link-navigate data-href-type="<%= hrefType %>"><%= language.documentHyperlinkGotoPage + link %>.</a>
+        <%} else  { %>
+            <% if (hyperlinkType === "textHyperlink") { %>
+                <button data-pcc-hyperlink="edit" class="pcc-hyperlink-icon pcc-hyperlink-icon-edit" title="<%= language.editButton %>"></button>
+            <% } %>
+            <a href="<%= link %>" data-pcc-link-navigate target="_blank"><%= link %></a>
+        <% } %>
     <% } %>
 </div>
